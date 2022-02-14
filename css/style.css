@@ -195,9 +195,11 @@ footer{
 
 /* Main content */
 
-.all-services ul li .button{
+.all-services ul li .button:focus,
+.all-services ul li .button:hover{
     background: #F5F4FA;
     border-radius: 4px;
+    cursor: pointer;
 }
 .all-services ul li .button-text{
     font-weight: 500;
