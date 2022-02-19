@@ -1,15 +1,21 @@
 body {
     font-family: Roboto;
-    color: #212121;
+    color: var(--main-text-color);
     
 }
+:root {
+    --main-text-color: #212121;
+    --brand-color: #757575;
+    --link-color: #2196F3;
+    --main-bg-color: #FFFFFF;
+  }
 
 
 
 /* Шапка сайта */
 .page-header{
     
-    background: #FFFFFF;
+    background: var(--main-bg-color);
     
    
 }
@@ -21,11 +27,11 @@ body {
     line-height: 1.2;
     letter-spacing: 0.03em;
     text-decoration: none;
-    color: #212121;
+    color: var(--main-text-color);
 
 }
 .logo-web {
-    color: #2196F3;
+    color: var(--link-color);
 }
 .site-nav{
 
@@ -34,41 +40,37 @@ body {
     line-height: 1.1;
     letter-spacing: 0.02em;
 }
-.site-nav li a{
+.site-nav .link{
     list-style: none;
     text-decoration: none;
-    color: #212121;
+    color: var(--main-text-color);
 }
-.site-nav .studio:hover{
-    color: #2196F3;
+.site-nav .link:hover,
+.site-nav .link:focus{
+    color: var(--link-color);
 }
-.site-nav .portfolio:hover{
-    color: #2196F3;
-}
-.site-nav .contacts:hover{
-    color: #2196F3;
-}
+
 li{
     list-style-type: none;
 }
 
-.site-contacts a{
+.site-contacts .link{
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
     text-decoration: none;
-    color: #757575;
+    color: var(--brand-color);
 }
 
-.site-contacts a:hover{
-    color: #2196F3;
+.site-contacts .link:hover{
+    color: var(--link-color);
 }
 
 /* Футер */
 
 footer{
-    background: #757575;
+    background: var(--brand-color);
 }
 
 .address a{
@@ -80,21 +82,46 @@ footer{
 
 }
 .address .maps{
-    color: #FFFFFF;
+    color: var(--main-bg-color);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+
 }
 .address .contact{
     color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
 }
-.address .contact:hover{
+.address .contact:hover,
+.address .contact:focus {
     color: #2196F3;
+}
+.logo-footer{
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--main-bg-color);
+
 }
 
 
 
 /* ! Основной контент ! */
-
 .main-service{
-    color: #FFFFFF;
+    background-color: #2F303A;
+}
+.main-service-title{
+    color: var(--main-bg-color);
     background: #2F303A;
     font-weight: 900;
     font-size: 44px;
@@ -105,7 +132,7 @@ footer{
    
 }
 .main-service .button{
-    background: #2196F3;
+    background: var(--link-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer; 
@@ -119,77 +146,72 @@ footer{
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    color: white;
+    color: var(--main-bg-color);
 }
-.benefits h2{
+.benefits-title{
     font-weight: bold;
     font-size: 36px;
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #212121;
+    color: var(--main-text-color);
 
 }
-.benefits h3{
+.benefits-subtitle{
     font-weight: bold;
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #212121;
+    color: var(--main-text-color);
 }
-.benefits p{
+.benefits-text{
     font-weight: normal;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--brand-color);
 }
-.occupation h2{
+.occupation-title{
     font-weight: bold;
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--main-text-color);
 
 }
-.benefits, .occupation{
-    background: #E5E5E5;
+
+.team-section{
+    background: var(--main-bg-color);
 }
-.team{
-    background: #F5F4FA;
-}
-.team h2{
+.team-title{
     font-weight: bold;
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--main-text-color);
 }
-.team ul li h3{
+.team-subtitle{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--main-text-color);
 }
-.team ul li p{
+.team-text{
     font-weight: normal;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--brand-color);
 }
-.team ul li{
-    background: #FFFFFF;
+.team-items{
+    background: var(--main-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-}
-.team ul li .picture{
-    border-radius: 0px;
 }
 
 
@@ -198,39 +220,48 @@ footer{
 
 
 .site-nav .link.current{
-    color: #2196F3;
+    color: var(--link-color);
 }
 
 /* Main content */
 
-.all-services ul li .button:focus,
-.all-services ul li .button:hover
-.all-services ul li .button:active{
+
+.all-services-button{
     background: #F5F4FA;
     border-radius: 4px;
     cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.all-services ul li .button-text{
+.button-text{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
     letter-spacing: 0.03em;
 }
-.all-services .button.current{
-    background: #2196F3;
+.all-services-title{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
 }
-.all-services li h2{
+.all-services-button:hover,
+.all-services-button:focus {
+    background: var(--link-color);
+}
+.website-list-title{
     font-weight: bold;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: #212121;
+    color: var(--main-text-color);
 }
-.all-services li p{
+.website-list-text{
     font-weight: normal;
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--brand-color);
 }
